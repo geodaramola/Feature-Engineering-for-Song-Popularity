@@ -41,6 +41,7 @@ Build a machine learning model to predict song popularity
 - Provide insights to guide future feature engineering efforts
 
 ## Conclusion
+
 For this project, I created a machine learning pipeline that scales the data using MinMaxScaler, selects four features using SelectKBest, and applies a Decision Tree Regressor with a maximum depth of 3 for prediction. The pipeline configuration was chosen using GridSearchCV, which evaluated multiple models and their respective hyperparameters and selected the best estimator by minimizing the mean squared error (MSE).
 
 The grid search identified an optimal estimator with a mean squared error of 405.7 using 4 features, using all the features will yield and MSE of about ~403, we can see that using these 4 features still yields a MSE close to the MSE using all the features. Since the primary objective of this project is to identify the most important features for predicting song popularity, the selected model—combined with SelectKBest—highlighted the following four features as most informative: danceability, instrumentalness, loudness, and audio_valence.
